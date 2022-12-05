@@ -1,3 +1,12 @@
+/* Import tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*  end of tailwind (global css rules (mainly inherited boilerplate from nextjs */
+/* TODO: check what's necessary and clean this up */
+
 html,
 body {
   padding: 0;
