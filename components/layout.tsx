@@ -1,10 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 
 export default function Layout({ children, pageTitle }: { children: React.ReactNode, pageTitle: string }) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>{pageTitle}</title>
         <meta
@@ -13,19 +11,10 @@ export default function Layout({ children, pageTitle }: { children: React.ReactN
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>{children}</main>
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-        <a href="https://github.com/marandino">Marandino</a>
+      {/* TODO: add a Navbar for the Search Box */}
+      <main >{children}</main>
+      <footer className="absolute bottom-px py-6 border-t-2 w-full text-center">
+        <a href="https://github.com/marandino">This is a neat footer with useful information.</a>
       </footer>
     </div>
   );
