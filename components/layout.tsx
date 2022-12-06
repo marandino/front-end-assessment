@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default function Layout({ children, pageTitle }: { children: React.ReactNode, pageTitle: string }) {
   return (
-    <div>
+    <div className="h-screen">
       <Head>
         <title>{pageTitle}</title>
         <meta
@@ -12,7 +12,7 @@ export default function Layout({ children, pageTitle }: { children: React.ReactN
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* TODO: add a Navbar for the Search Box */}
-      <main >{children}</main>
+      <main className="h-full" >{children}</main>
       <footer className="absolute bottom-px py-6 border-t-2 w-full text-center">
         <a href="https://github.com/marandino">This is a neat footer with useful information.</a>
       </footer>

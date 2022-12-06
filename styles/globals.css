@@ -6,9 +6,10 @@
 
 /*  end of tailwind (global css rules (mainly inherited boilerplate from nextjs */
 /* TODO: check what's necessary and clean this up */
-
+div#__next,
 html,
 body {
+  height: 100vh;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
