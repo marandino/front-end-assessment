@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function Layout({ children, pageTitle }: { children: React.ReactNode, pageTitle: string }) {
+export default function Layout({ children, pageTitle }: { children: React.ReactNode; pageTitle: string }) {
   return (
     <div>
       <Head>
