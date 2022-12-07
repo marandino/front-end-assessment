@@ -1,9 +1,11 @@
 import Layout from "../../components/layout";
 import { CharacterObject } from "../../interfaces/dataInterfaces";
+import { formatText } from "../../utils/formatters";
 
 export default function Character({ props }: { props: { data: CharacterObject } }) {
   const { data: char } = props;
 
+  // decided on going for a map instead of a SFC, because of the low complexity of the element...
   const dataParagraphs = Object.entries(char).map(([key, value]) => {
     return (
       <p key={key + "-p"} className="capitalize">
@@ -38,9 +40,4 @@ export async function getServerSideProps(context: any) {
   return {
     props: { props: { data } },
   };
-}
-
-//TODO: refactor this to a utils folder
-function formatText(text: string) {
-  return text.replace(/_/g, " ");
 }
