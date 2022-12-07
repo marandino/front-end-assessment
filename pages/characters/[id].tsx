@@ -1,17 +1,5 @@
 import Layout from "../../components/layout";
-
-//TODO: refactor this by merging it to the type that's on Index.tsx
-type CharacterObject = {
-  name: string;
-  height: string;
-  mass: string;
-  hair_color: string;
-  skin_color: string;
-  eye_color: string;
-  birth_year: string;
-  gender: string;
-  homeworld: string;
-};
+import { CharacterObject } from "../../interfaces/dataInterfaces";
 
 export default function Character({ props }: { props: { data: CharacterObject } }) {
   const { data: char } = props;
