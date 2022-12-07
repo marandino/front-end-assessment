@@ -1,15 +1,5 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) created for an assessment for a Front-end position.
 
-## Instructions to Run
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-The development version of the app would be running on:  [http://localhost:3000](http://localhost:3000).
-
 ## My train of thought about the stack.
 
 ### TypeScript:
@@ -24,3 +14,13 @@ What else can be said about tailwind? It's so modular, so easy to use, that I ju
 ### The overall structure:
 I believe that making this a Single Page Application could be a bit overkill (since one of the instructions was to have at least two different views), so I used query parameters for most of the interactions.
 E.g: The search page is just the index.tsx but taking `/?name=foo` into account, and modifying the query to adapt it.
+
+## Instructions to Run
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+The development version of the app would be running on:  [http://localhost:3000](http://localhost:3000).
