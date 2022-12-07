@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Layout({ children, pageTitle, hasBackButton }: { children: React.ReactNode; pageTitle: string; hasBackButton?: boolean }) {
   return (
@@ -10,16 +11,16 @@ export default function Layout({ children, pageTitle, hasBackButton }: { childre
       </Head>
       <nav className="p-4 w-full justify-center flex">
         {hasBackButton && (
-          <a href="/">
+          <Link href="/">
             <button className="mr-4 border-2 px-4 py-2">Back</button>
-          </a>
+          </Link>
         )}
         <input className="border-2 px-4 py-2" type="text" name="searchBar" id="searchBar" />
         <button className="ml-4 border-2 px-4 py-2">Search</button>
       </nav>
       <main className="pt-16">{children}</main>
       <footer className="absolute bottom-px py-6 border-t-2 w-full text-center">
-        <a href="https://github.com/marandino">This is a neat footer with unuseful information.</a>
+        <Link href="https://github.com/marandino">This is a neat footer with unuseful information.</Link>
       </footer>
     </div>
   );

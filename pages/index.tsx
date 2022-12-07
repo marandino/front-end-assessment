@@ -1,5 +1,6 @@
 import Layout from "../components/layout";
 import Pagination from "../components/pagination";
+import Link from "next/link";
 
 type DataResults = {
   count: number;
@@ -35,9 +36,9 @@ export default function Home({ props }: { props: { data: DataResults; page: numb
   }
 
   const charList = props.data.results.map((char) => (
-    <a className="text-center" href={`/characters/${getElementId(char.url)}`}>
+    <Link className="text-center" href={`/characters/${getElementId(char.url)}`}>
       <p>{char.name}</p>
-    </a>
+    </Link>
   ));
 
   return (
