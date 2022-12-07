@@ -43,7 +43,18 @@ export default function Home({ props }: { props: { data: DataResults; page: numb
 
   return (
     <Layout pageTitle="Home">
-      <div className="grid grid-cols-2 max-w-xl mx-auto gap-4">{charList}</div>
+      <>
+        {props.data.count ? (
+          <div className="grid grid-cols-2 max-w-xl mx-auto gap-4">{charList}</div>
+        ) : (
+          <div className="mx-auto text-center">
+            <p className="opacity-70 mb-4">There are no results for your query</p>
+            <Link href="/" className="bg-sky-500 text-white font-bold rounded-md px-4 py-2">
+              Go Back
+            </Link>
+          </div>
+        )}
+      </>
       <Pagination currentIndex={props.page} totalResults={props.data.count} />
     </Layout>
   );
@@ -51,9 +62,7 @@ export default function Home({ props }: { props: { data: DataResults; page: numb
 
 export async function getServerSideProps(context: any) {
   //FIXME: couldn't find the context Interface in Nextjs's documentation... ^this ANY is driving me insane.
-  console.log(context.query);
-
-  const res = await fetch(`https://swapi.py4e.com/api/people/?page=${context.query.page || 1}`);
+  const res = await fetch(`https://swapi.py4e.com/api/people/?page=${context.query.page || 1}&search=${context.query.name || ""}`);
   const data = await res.json();
 
   return {
