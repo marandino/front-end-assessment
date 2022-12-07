@@ -36,7 +36,7 @@ export default function Home({ props }: { props: { data: DataResults; page: numb
   }
 
   const charList = props.data.results.map((char) => (
-    <Link key={char.name} className="text-center" href={`/characters/${getElementId(char.url)}`}>
+    <Link key={char.name} className="text-center hover:opacity-70" href={`/characters/${getElementId(char.url)}`}>
       <p>{char.name}</p>
     </Link>
   ));
