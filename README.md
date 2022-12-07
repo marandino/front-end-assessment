@@ -10,25 +10,17 @@ yarn dev
 
 The development version of the app would be running on:  [http://localhost:3000](http://localhost:3000).
 
+## My train of thought about the stack.
 
-### Documentation from the Default README file.
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### TypeScript:
+Decided on using TS, mainly to avoid flooding the components with useless information, that could be displayed by TypeScript.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Next.js:
+This was my first time using Vercel (Usually I go for a full deploy using Digital Ocean) so I wanted to try Next.js. It's been a wonderful time; using this piece of tech.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Tailwind:
+What else can be said about tailwind? It's so modular, so easy to use, that I just can't stop using it anymore.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### The overall structure:
+I believe that making this a Single Page Application could be a bit overkill (since one of the instructions was to have at least two different views), so I used query parameters for most of the interactions.
+E.g: The search page is just the index.tsx but taking `/?name=foo` into account, and modifying the query to adapt it.
