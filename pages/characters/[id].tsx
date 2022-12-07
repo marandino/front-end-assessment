@@ -17,11 +17,15 @@ export default function Character({ props }: { props: { data: CharacterObject } 
   const { data: char } = props;
 
   const dataParagraphs = Object.entries(char).map(([key, value]) => {
-    return <p key={key + "-p"} className="capitalize">{formatText(key) + ": " + formatText(value)}</p>;
+    return (
+      <p key={key + "-p"} className="capitalize">
+        <b>{formatText(key) + ": "}</b> {formatText(value)}
+      </p>
+    );
   });
   return (
     <Layout hasBackButton={true} pageTitle={char.name}>
-      <div className="grid grid-cols-2 max-w-xl mx-auto gap-4">{dataParagraphs}</div>
+      <div className="grid grid-cols-2 text-center max-w-xl mx-auto gap-4">{dataParagraphs}</div>
     </Layout>
   );
 }
