@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function Layout({ children, pageTitle }: { children: React.ReactNode; pageTitle: string }) {
+export default function Layout({ children, pageTitle, hasBackButton }: { children: React.ReactNode; pageTitle: string; hasBackButton?: boolean }) {
   return (
     <div>
       <Head>
@@ -9,9 +9,11 @@ export default function Layout({ children, pageTitle }: { children: React.ReactN
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <nav className="p-4 w-full justify-center flex">
-        <a href="/">
-          <button className="mr-4 border-2 px-4 py-2">Back</button>
-        </a>
+        {hasBackButton && (
+          <a href="/">
+            <button className="mr-4 border-2 px-4 py-2">Back</button>
+          </a>
+        )}
         <input className="border-2 px-4 py-2" type="text" name="searchBar" id="searchBar" />
         <button className="ml-4 border-2 px-4 py-2">Search</button>
       </nav>

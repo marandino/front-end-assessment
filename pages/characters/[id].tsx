@@ -20,7 +20,7 @@ export default function Character({ props }: { props: { data: CharacterObject } 
     return <p className="capitalize">{formatText(key) + ": " + formatText(value)}</p>;
   });
   return (
-    <Layout pageTitle={char.name}>
+    <Layout hasBackButton={true} pageTitle={char.name}>
       <div className="grid grid-cols-2 max-w-xl mx-auto gap-4">{dataParagraphs}</div>
     </Layout>
   );
