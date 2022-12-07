@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## My train of thought about the stack.
 
 ### TypeScript:
-Decided on using TS, mainly to avoid flooding the components with useless information, that could be displayed by TypeScript.
+Decided on using TS, mainly to avoid flooding the components with useless information that could be displayed by TypeScript.
 
 ### Next.js:
 This was my first time using Vercel (Usually I go for a full deploy using Digital Ocean) so I wanted to try Next.js. It's been a wonderful time; using this piece of tech.
