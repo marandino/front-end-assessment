@@ -17,7 +17,7 @@ export default function Character({ props }: { props: { data: CharacterObject } 
   const { data: char } = props;
 
   const dataParagraphs = Object.entries(char).map(([key, value]) => {
-    return <p className="capitalize">{formatText(key) + ": " + formatText(value)}</p>;
+    return <p key={key + "-p"} className="capitalize">{formatText(key) + ": " + formatText(value)}</p>;
   });
   return (
     <Layout hasBackButton={true} pageTitle={char.name}>
